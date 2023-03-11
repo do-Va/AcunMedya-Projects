@@ -2,8 +2,16 @@
 
 ### Restaurant Project
 
-\*\* only html
+`only html`
 
 [Live site](https://restaurant-dova.netlify.app/)
 
 ![](images/restaurant-html.png)
+
+### Design System Project
+
+` html and css (responsive with clamp())`
+
+[Live site](https://https://design-system-dova.netlify.app//)
+
+![](images/design-system.png)

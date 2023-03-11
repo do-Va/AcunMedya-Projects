@@ -1,0 +1,327 @@
+/*=============================================
+=                   Values                    =
+=============================================*/
+
+:root {
+  --white: #ffffff;
+  --gray-light: #e3e7ee;
+  --gray: #4c5469;
+  --gray-100: #8f98a7;
+  --blue: #2051ed;
+  --blue-100: #2151ec;
+  --dark: #11132a;
+  --dark-100: #11152a;
+  --dark-200: #181b20;
+  --yellow: #f1ba06;
+
+  --fs-xs: 14px;
+  --fs-basic: 16px;
+  --fs-sm: 19px;
+  --fs-md: 32px;
+  --fs-lg: 40px;
+  --fs-xl: 69px;
+  --fs-xxl: 80px;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --space-md: 20px;
+  --space-xl: 50px;
+
+  --br-md: 8px;
+  --br-lg: 15px;
+
+  --transition-all: all 0.2s linear;
+}
+/*=====  End of Values  ======*/
+
+/*=============================================
+=                 Global Styles               =
+=============================================*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  text-transform: capitalize;
+}
+
+p {
+  line-height: 1.5;
+  color: var(--gray);
+}
+
+details > summary {
+  list-style: none;
+  user-select: none;
+  cursor: pointer;
+}
+details > summary::marker, /* Latest Chrome, Edge, Firefox */ 
+details > summary::-webkit-details-marker /* Safari */ {
+  display: none;
+}
+
+.flex-horizontal-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.grid-center {
+  display: grid;
+  place-content: center;
+}
+
+.hero__title {
+  font-size: clamp(var(--fs-md), 10vw, var(--fs-xl));
+  max-width: 522px;
+  font-weight: var(--fw-bold);
+  color: var(--dark);
+}
+
+.hero__title span {
+  color: var(--blue-100);
+}
+
+.hero__text {
+  font-size: clamp(var(--fs-xs), 4vw, var(--fs-sm));
+  color: var(--gray);
+  max-width: 460px;
+}
+
+.btn {
+  width: 130px;
+  height: 52px;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: var(--br-md);
+  transition: var(--transition-all);
+}
+
+.btn:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+/*=====  End of Global Styles  ======*/
+
+/*=============================================
+=                  Heros                      =
+=============================================*/
+
+/* First */
+.hero-first {
+  min-height: 100vh;
+  text-align: center;
+  padding: 100px 20px 0;
+  gap: clamp(var(--space-md), 10vw, var(--space-xl));
+}
+
+.hero-first .hero__title {
+  margin-top: auto;
+}
+
+.float-image {
+  margin-top: auto;
+  max-width: 830px;
+}
+
+/* Second */
+.hero-second {
+  min-height: 100vh;
+  text-align: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+    url('../images/image2.png') center bottom/cover no-repeat;
+}
+
+/* Third */
+.hero-third {
+  min-height: 100vh;
+  text-align: left;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  background: url('../images/image3.png') right center/cover no-repeat;
+  backdrop-filter: brightness(60%);
+}
+
+.content > *:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 800px) {
+  .hero-third {
+    background-position: center center;
+  }
+
+  .hero-third .content {
+    transform: translateX(clamp(0%, 12vw + 1rem, 50%));
+  }
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  color: var(--gray);
+  gap: 20px;
+}
+
+/* Fourth */
+.hero-fourth {
+  min-height: 100vh;
+  text-align: left;
+  justify-content: center;
+  padding: 50px 20px;
+  padding-left: clamp(20px, 8vw, 100px);
+}
+
+.hero__small__title {
+  color: var(--yellow);
+  font-size: clamp(var(--fs-sm), 10vw, calc(var(--fs-md)));
+  font-weight: var(--fw-regular);
+}
+
+.hero__special__title {
+  font-size: clamp(var(--fs-lg), 7vw, var(--fs-xxl));
+  color: var(--dark-200);
+  margin: 30px 0 42px;
+}
+
+.hero__special__title span {
+  color: var(--gray-100);
+}
+
+.hero-fourth .hero__text {
+  max-width: 660px;
+  margin-bottom: 24px;
+}
+
+.special-btn {
+  width: 241px;
+  height: 65px;
+  background-color: var(--yellow);
+  border-radius: var(--br-lg);
+  text-decoration: underline;
+  color: var(--dark-200);
+  font-size: 25px;
+  margin-top: calc(85px - 24px);
+}
+
+/*=====   End of Heros  ======*/
+
+/*=============================================
+=                  Accordion                  =
+=============================================*/
+
+.accordion {
+  min-height: 100vh;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.accordion__title {
+  font-size: clamp(var(--fs-md), 6vw, var(--fs-lg));
+  margin-bottom: 24px;
+}
+
+.accordion__text {
+  max-width: 486px;
+  margin-bottom: 49px;
+  font-size: clamp(var(--fs-xs), 3vw, var(--fs-basic));
+}
+
+.accordion__container {
+  width: 100%;
+  text-align: left;
+}
+
+.accordion__item:first-child {
+  border-top: 2px solid var(--gray-light);
+}
+
+.accordion__item {
+  padding: 25px 0;
+  border-bottom: 2px solid var(--gray-light);
+}
+
+.accordion__item summary {
+  color: var(--dark-100);
+  font-weight: var(--fw-bold);
+  font-size: clamp(var(--fs-basic), 3vw, var(--fs-sm));
+}
+
+.accordion__item__content {
+  margin-top: 16px;
+  font-size: clamp(var(--fs-xs), 3vw, var(--fs-basic));
+}
+
+.accordion__link {
+  color: var(--gray);
+  margin-top: 37px;
+}
+
+.accordion__link a {
+  color: var(--blue-100);
+  font-weight: var(--fw-medium);
+}
+
+/*=====  End of Accordion  ======*/
+
+/*=============================================
+=                  Component                  =
+=============================================*/
+
+.component {
+  margin: 100px 0;
+  padding: 20px;
+}
+
+.component__title {
+  margin-bottom: 20px;
+  font-size: clamp(var(--fs-sm), 5vw, calc(var(--fs-md) + 1px));
+}
+
+.component__text {
+  margin-bottom: 20px;
+  font-size: clamp(var(--fs-xs), 2vw, var(--fs-basic));
+}
+
+.component__link {
+  margin-top: 30px;
+  color: var(--blue-100);
+  text-decoration: underline;
+}
+/*=====  End of Component  ======*/
