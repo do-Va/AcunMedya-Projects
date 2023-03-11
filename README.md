@@ -12,6 +12,6 @@
 
 ` html and css (responsive with clamp())`
 
-[Live site](https://https://design-system-dova.netlify.app//)
+[Live site](https://design-system-dova.netlify.app//)
 
 ![](images/design-system.png)
